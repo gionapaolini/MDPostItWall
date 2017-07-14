@@ -1,0 +1,39 @@
+<html>
+<head>
+ <link href="assets/style.css" rel="stylesheet" type="text/css"/>
+ <link href="assets/Keyboard-master/docs/css/jquery-ui.min.css" rel="stylesheet">
+ <link href="assets/Keyboard-master/css/keyboard.css" rel="stylesheet">
+
+</head>
+<body>
+<h1>PostIt Wall!</h1>
+<h2> Short text bla bla</h2>
+<button id = "add">Add a postit</button>
+
+
+ <script>
+           var texts = [];
+
+          
+         <% for(var i=0;i<postit.length ;i++){ %>
+       	texts[<%= i%>] = {text: "<%=postit[i].text %>", id:"<%=postit[i].id %>"}; 
+        <%   }%>
+          
+ </script>
+
+ <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+     <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script type="text/javascript" src="assets/p5/p5.js"></script>
+  <script type="text/javascript" src="assets/p5/addons/p5.dom.js"></script>
+    <script src="assets/Keyboard-master/js/jquery.keyboard.js"></script>
+   <script src="assets/victor.js"></script>
+  <script src="assets/wall.js"></script>
+  <script src="assets/postit.js"></script>
+
+ <script src="assets/script.js"></script>
+</body>
+</html>
