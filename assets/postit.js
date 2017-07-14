@@ -1,5 +1,5 @@
-var CIRCLE_DISTANCE = 10;
-var CIRCLE_RADIUS = 1;
+var CIRCLE_DISTANCE = 20;
+var CIRCLE_RADIUS = 5;
 var ANGLE_CHANGE =50;
 var MAX_SEE_AHEAD = 10;
 function Postit(pText, id, wall){
@@ -54,7 +54,7 @@ function Postit(pText, id, wall){
 
 	this.move = function  () {
 		if($("#"+this.id).hasClass("cmySquare")){
-			this.velocity = this.velocity.add(this.wander()).normalize().multiplyScalar(1);
+			this.velocity = this.velocity.add(this.wander()).normalize().multiplyScalar(0.5);
 			this.position = this.position.add(this.velocity);
 			this.cmyDiv.position(this.position.x, this.position.y);
 		}
